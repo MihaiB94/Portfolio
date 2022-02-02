@@ -206,10 +206,6 @@
           box-sizing: border-box;
 }
 
-html {
-  visibility: hidden;
-}
-
 html,
 body {
   font-family: 'Roboto', sans-serif;
@@ -2568,31 +2564,5 @@ body {
   #projects .item .right .ext-links .buttons .source-code {
     margin: 0 2rem;
   }
-}
-
-.is-hidden {
-  top: -100px;
-  opacity: 0;
-  -webkit-transition: opacity 0.2s, -webkit-transform 0.4s;
-  transition: opacity 0.2s, -webkit-transform 0.4s;
-  transition: transform 0.4s, opacity 0.2s;
-  transition: transform 0.4s, opacity 0.2s, -webkit-transform 0.4s;
-}
-
-.fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-  -webkit-transition: opacity 0.2s, -webkit-transform 0.4s;
-  transition: opacity 0.2s, -webkit-transform 0.4s;
-  transition: transform 0.4s, opacity 0.2s;
-  transition: transform 0.4s, opacity 0.2s, -webkit-transform 0.4s;
-}
-
-.navbar-hide {
-  pointer-events: none;
-  opacity: 0;
 }
 /*# sourceMappingURL=main.css.map */

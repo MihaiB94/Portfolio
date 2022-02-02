@@ -59,9 +59,10 @@ if (scrollButton) {
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
 const sections = document.querySelectorAll('section');
 const navLi = document.querySelectorAll('nav ul li a');
-let prevScrollpos = window.pageYOffset;
+
 const navbar = document.querySelector('.navbar');
 const logo = document.querySelector('.svg_logo');
+let prevScrollpos = window.pageYOffset;
 
 window.onscroll = function () {
   let currentScrollPos = window.pageYOffset;
@@ -77,7 +78,6 @@ window.onscroll = function () {
     } else {
       navbar.style.boxShadow = 'none';
       logo.style.padding = '1.5rem 0';
-      navbar.style.opacity = '1';
       logo.style.transition = 'all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)';
     }
   } else {

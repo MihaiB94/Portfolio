@@ -9,10 +9,6 @@
   box-sizing: border-box;
 }
 
-html {
-  visibility: hidden;
-}
-
 html,
 body {
   font-family: 'Roboto', sans-serif;
@@ -2269,24 +2265,4 @@ body {
       }
     }
   }
-}
-
-.is-hidden {
-  top: -100px;
-  opacity: 0;
-  transition: transform 0.4s, opacity 0.2s;
-}
-
-.fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-  transition: transform 0.4s, opacity 0.2s;
-}
-
-.navbar-hide {
-  pointer-events: none;
-  opacity: 0;
 }
