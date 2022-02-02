@@ -253,6 +253,8 @@ const fullName = document.getElementById('name');
 const email = document.getElementById('email');
 
 form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
   checkInputs();
 });
 
