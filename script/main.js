@@ -68,7 +68,7 @@ window.onscroll = function () {
 
   if (prevScrollpos > currentScrollPos) {
     navbar.style.top = '0';
-    if (window.pageYOffset > '100') {
+    if (window.pageYOffset > '20') {
       navbar.style.boxShadow =
         'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px';
       navbar.style.opacity = '0.98';
@@ -80,7 +80,7 @@ window.onscroll = function () {
       logo.style.transition = 'all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)';
     }
   } else {
-    navbar.style.top = '-100px';
+    navbar.style.top = '-200px';
   }
 
   //Active Section
