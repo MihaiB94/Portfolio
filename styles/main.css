@@ -1833,6 +1833,14 @@ body {
   color: #e74c3c;
 }
 
+.contact textarea,
+.contact input[type='text'],
+.contact input[type='button'],
+.contact input[type='submit'] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
 @media screen and (max-width: 1400px) and (max-height: 760px) {
   #left-panel {
     padding: 1.5rem 2.5rem;
