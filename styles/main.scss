@@ -1246,6 +1246,11 @@ body {
             // }
           }
         }
+
+        a[href^='tel'] {
+          text-decoration: inherit;
+          color: inherit;
+        }
       }
 
       .form-socials {

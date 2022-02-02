@@ -1669,6 +1669,11 @@ body {
   transition: color 0.5s cubic-bezier(0.33, 1, 0.68, 1) 0s;
 }
 
+.contact .contact-container .contact-info .info a[href^='tel'] {
+  text-decoration: inherit;
+  color: inherit;
+}
+
 .contact .contact-container .contact-info .form-socials {
   position: relative;
   display: -webkit-box;
