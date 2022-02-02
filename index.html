@@ -569,7 +569,7 @@
 
         <div class="contact-form" data-aos="zoom-in">
           <h2 class="contact-form-heading">Send a Message</h2>
-          <form class="form-box" id="contact-form" method="post" action="contact-form-handler.php">
+          <form class="form-box" id="contact-form" action="POST" data-netlify="true">
             
             <div class="form-control w50">
               <input type="text" name="name" id="name" required />
@@ -591,6 +591,17 @@
               <textarea name="message" required></textarea>
               <span>Write your message here...</span>
             </div>
+          
+            <div class="file-upload">
+              <input type="file" name="myfile" id="myfile" placeholder="Upload File" required></input>  
+            </div>
+
+            <div class="form-control">
+              <div data-netlify-recaptcha="true"></div>
+            </div>
+          
+        
+
             <div class="form-control w100">
               <input type="submit" value="Send" />
             </div>

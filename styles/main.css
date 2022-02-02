@@ -1801,7 +1801,7 @@ body {
   background-color: #17252a;
   color: #feffff;
   border: none;
-  max-width: 150px;
+  max-width: 140px;
   padding: 12px;
   -webkit-transition: background-color 0.5s cubic-bezier(0.33, 1, 0.68, 1) 0s;
   transition: background-color 0.5s cubic-bezier(0.33, 1, 0.68, 1) 0s;
@@ -1809,6 +1809,10 @@ body {
 
 .contact .contact-container .contact-form .form-box .form-control input[type='submit']:hover {
   background-color: #3aafa9;
+}
+
+.contact .contact-container .contact-form .form-box .file-upload {
+  margin-bottom: 3rem;
 }
 
 .contact .contact-container .contact-form .form-box .form-control.success input {

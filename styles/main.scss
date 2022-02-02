@@ -1364,7 +1364,7 @@ body {
             background-color: $primary-color;
             color: $secondary-text--color;
             border: none;
-            max-width: 150px;
+            max-width: 140px;
             padding: 12px;
             transition: background-color 0.5s cubic-bezier(0.33, 1, 0.68, 1) 0s;
 
@@ -1372,6 +1372,9 @@ body {
               background-color: $special-color;
             }
           }
+        }
+        .file-upload {
+          margin-bottom: 3rem;
         }
         .form-control.success input {
           border-color: #2ecc71;
