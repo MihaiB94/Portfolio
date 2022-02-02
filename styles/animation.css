@@ -1,0 +1,201 @@
+@-webkit-keyframes myAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.nav-list-animation1 {
+  -webkit-animation: myAnim 1s ease 0s 1 normal forwards;
+          animation: myAnim 1s ease 0s 1 normal forwards;
+}
+
+.nav-list-animation2 {
+  -webkit-animation: myAnim 1s ease 0.15s 1 normal forwards;
+          animation: myAnim 1s ease 0.15s 1 normal forwards;
+}
+
+.nav-list-animation3 {
+  -webkit-animation: myAnim 1s ease 0.3s 1 normal forwards;
+          animation: myAnim 1s ease 0.3s 1 normal forwards;
+}
+
+.nav-list-animation4 {
+  -webkit-animation: myAnim 1s ease 0.45s 1 normal forwards;
+          animation: myAnim 1s ease 0.45s 1 normal forwards;
+}
+
+@-webkit-keyframes myAnim1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes myAnim1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.hero-animation1 {
+  -webkit-animation: myAnim1 1s ease 0s 1 normal forwards;
+          animation: myAnim1 1s ease 0s 1 normal forwards;
+}
+
+.hero-animation2 {
+  -webkit-animation: myAnim1 1s ease 0.2s 1 normal forwards;
+          animation: myAnim1 1s ease 0.2s 1 normal forwards;
+}
+
+.hero-animation3 {
+  -webkit-animation: myAnim1 1s ease 0.4s 1 normal forwards;
+          animation: myAnim1 1s ease 0.4s 1 normal forwards;
+}
+
+.hero-animation4 {
+  -webkit-animation: myAnim1 1s ease 0.6s 1 normal forwards;
+          animation: myAnim1 1s ease 0.6s 1 normal forwards;
+}
+
+@-webkit-keyframes myAnim2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotateX(100deg);
+            transform: rotateX(100deg);
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+  }
+}
+
+@keyframes myAnim2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotateX(100deg);
+            transform: rotateX(100deg);
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+  }
+}
+
+.hero-animation5 {
+  -webkit-animation: myAnim2 1s ease 0.8s 1 normal forwards;
+          animation: myAnim2 1s ease 0.8s 1 normal forwards;
+}
+
+@-webkit-keyframes myAnim4 {
+  0% {
+    -webkit-transform: scale(0.7) translate(0, 0);
+            transform: scale(0.7) translate(0, 0);
+    -webkit-transform-origin: 84% 84%;
+            transform-origin: 84% 84%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+    opacity: 0.4;
+  }
+}
+
+@keyframes myAnim4 {
+  0% {
+    -webkit-transform: scale(0.7) translate(0, 0);
+            transform: scale(0.7) translate(0, 0);
+    -webkit-transform-origin: 84% 84%;
+            transform-origin: 84% 84%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+    opacity: 0.4;
+  }
+}
+
+.hero-animation6 {
+  -webkit-animation: myAnim4 1s ease 0s 1 normal forwards;
+          animation: myAnim4 1s ease 0s 1 normal forwards;
+}
+
+.socials-animation1 {
+  -webkit-animation: myAnim3 1s ease 0s 1 normal forwards;
+          animation: myAnim3 1s ease 0s 1 normal forwards;
+}
+
+.socials-animation2 {
+  -webkit-animation: myAnim3 1s ease 0.2s 1 normal forwards;
+          animation: myAnim3 1s ease 0.2s 1 normal forwards;
+}
+
+.socials-animation3 {
+  -webkit-animation: myAnim3 1s ease 0.4s 1 normal forwards;
+          animation: myAnim3 1s ease 0.4s 1 normal forwards;
+}
+
+@-webkit-keyframes myAnim3 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-250px);
+            transform: translateX(-250px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes myAnim3 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-250px);
+            transform: translateX(-250px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+/*# sourceMappingURL=animation.css.map */
