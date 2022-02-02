@@ -63,45 +63,36 @@ let prevScrollpos = window.pageYOffset;
 const navbar = document.querySelector('.navbar');
 const logo = document.querySelector('.svg_logo');
 
-window.onscroll = function () {
-  let currentScrollPos = window.pageYOffset;
-
-  if (prevScrollpos > currentScrollPos) {
-    navbar.style.top = '0';
-    if (window.pageYOffset > '20') {
-      navbar.style.boxShadow =
-        'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px';
-      navbar.style.opacity = '0.98';
-
-      logo.style.padding = '0.5rem 0';
-    } else {
-      navbar.style.boxShadow = 'none';
-      logo.style.padding = '1.5rem 0';
-      logo.style.transition = 'all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)';
+$(document).ready(function () {
+  var previousScroll = 0;
+  $(window).scroll(function () {
+    var currentScroll = $(this).scrollTop();
+    if (currentScroll < 100) {
+      showTopNav();
+    } else if (
+      currentScroll > 0 &&
+      currentScroll < $(document).height() - $(window).height()
+    ) {
+      if (currentScroll > previousScroll) {
+        hideNav();
+      } else {
+        showNav();
+      }
+      previousScroll = currentScroll;
     }
-  } else {
-    navbar.style.top = '-100px';
+  });
+
+  function hideNav() {
+    $('.navbar').removeClass('is-visible').addClass('is-hidden');
   }
 
-  //Active Section
-  prevScrollpos = currentScrollPos;
-
-  var current = '';
-
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    if (currentScrollPos >= sectionTop - 300) {
-      current = section.getAttribute('id');
-    }
-  });
-
-  navLi.forEach((a) => {
-    a.classList.remove('active');
-    if (a.href.includes(current)) {
-      a.classList.add('active');
-    }
-  });
-};
+  function showNav() {
+    $('.navbar')
+      .removeClass('is-hidden')
+      .addClass('is-visible')
+      .addClass('scrolling');
+  }
+});
 // -----------------------END NAVBAR-----------------------//////////////
 
 // -------------- ANIMATION WHEN ON VIEWPORT--------------
