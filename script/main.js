@@ -77,10 +77,11 @@ window.onscroll = function () {
     } else {
       navbar.style.boxShadow = 'none';
       logo.style.padding = '1.5rem 0';
+      navbar.style.opacity = '1';
       logo.style.transition = 'all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)';
     }
   } else {
-    navbar.style.opacity = '0';
+    navbar.style.top = '-100px';
   }
 
   //Active Section
