@@ -56,48 +56,36 @@ if (scrollButton) {
 // -----------------------END Smooth scrolling--------------------------/////
 
 // -----------------------NAVBAR-----------------------//////////////////
-
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
 const sections = document.querySelectorAll('section');
 const navLi = document.querySelectorAll('nav ul li a');
+let prevScrollpos = window.pageYOffset;
 const navbar = document.querySelector('.navbar');
 const logo = document.querySelector('.svg_logo');
 
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-$(document).ready(function () {
-  var previousScroll = 0;
-  $(window).scroll(function () {
-    var currentScroll = $(this).scrollTop();
-    if (currentScroll < 100) {
-      showTopNav();
-    } else if (
-      currentScroll > 0 &&
-      currentScroll < $(document).height() - $(window).height()
-    ) {
-      if (currentScroll > previousScroll) {
-        hideNav();
-      } else {
-        showNav();
-      }
-      previousScroll = currentScroll;
-    }
-  });
-
-  function hideNav() {
-    $('.navbar').removeClass('is-visible').addClass('is-hidden');
-  }
-
-  function showNav() {
-    $('.navbar')
-      .removeClass('is-hidden')
-      .addClass('is-visible')
-      .addClass('scrolling');
-  }
-});
-
-// Active section link
 window.onscroll = function () {
   let currentScrollPos = window.pageYOffset;
+
+  if (prevScrollpos > currentScrollPos) {
+    navbar.style.top = '0';
+    if (window.pageYOffset > '20') {
+      navbar.style.boxShadow =
+        'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px';
+      navbar.style.opacity = '0.98';
+
+      logo.style.padding = '0.5rem 0';
+    } else {
+      navbar.style.boxShadow = 'none';
+      logo.style.padding = '1.5rem 0';
+      logo.style.transition = 'all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)';
+    }
+  } else {
+    navbar.style.opacity = '0';
+  }
+
+  //Active Section
   prevScrollpos = currentScrollPos;
+
   var current = '';
 
   sections.forEach((section) => {

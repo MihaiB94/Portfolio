@@ -2571,6 +2571,7 @@ body {
 }
 
 .is-hidden {
+  top: -100px;
   opacity: 0;
   -webkit-transition: opacity 0.2s, -webkit-transform 0.4s;
   transition: opacity 0.2s, -webkit-transform 0.4s;
@@ -2584,6 +2585,10 @@ body {
   right: 0;
   left: 0;
   z-index: 1030;
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.4s;
+  transition: opacity 0.2s, -webkit-transform 0.4s;
+  transition: transform 0.4s, opacity 0.2s;
+  transition: transform 0.4s, opacity 0.2s, -webkit-transform 0.4s;
 }
 
 .navbar-hide {
