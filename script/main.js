@@ -56,13 +56,13 @@ if (scrollButton) {
 // -----------------------END Smooth scrolling--------------------------/////
 
 // -----------------------NAVBAR-----------------------//////////////////
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+
 const sections = document.querySelectorAll('section');
 const navLi = document.querySelectorAll('nav ul li a');
-let prevScrollpos = window.pageYOffset;
 const navbar = document.querySelector('.navbar');
 const logo = document.querySelector('.svg_logo');
 
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
 $(document).ready(function () {
   var previousScroll = 0;
   $(window).scroll(function () {
@@ -93,6 +93,27 @@ $(document).ready(function () {
       .addClass('scrolling');
   }
 });
+
+// Active section link
+window.onscroll = function () {
+  let currentScrollPos = window.pageYOffset;
+  prevScrollpos = currentScrollPos;
+  var current = '';
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    if (currentScrollPos >= sectionTop - 300) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLi.forEach((a) => {
+    a.classList.remove('active');
+    if (a.href.includes(current)) {
+      a.classList.add('active');
+    }
+  });
+};
 // -----------------------END NAVBAR-----------------------//////////////
 
 // -------------- ANIMATION WHEN ON VIEWPORT--------------
