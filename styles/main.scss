@@ -1376,41 +1376,40 @@ body {
         .file-upload {
           margin-bottom: 3rem;
         }
-        .form-control.success input {
-          border-color: #2ecc71;
-        }
-
-        .form-control.error input {
-          border-color: #e74c3c;
-        }
-
-        .form-control.success i.fa-check-circle {
-          visibility: visible;
-          color: #2ecc71;
-        }
-
-        .form-control.error i.fa-exclamation-circle {
-          visibility: visible;
-          color: #e74c3c;
-        }
-
-        .form-control.error small {
-          visibility: visible;
-          color: #e74c3c;
-        }
       }
     }
+
+    textarea,
+    input[type='text'],
+    input[type='button'],
+    input[type='submit'] {
+      -webkit-appearance: none;
+      border-radius: 0;
+    }
+  }
+  .form-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 100%;
   }
 
-  textarea,
-  input[type='text'],
-  input[type='button'],
-  input[type='submit'] {
-    -webkit-appearance: none;
-    border-radius: 0;
+  .form-control.success input {
+    border-color: #09c372;
+  }
+
+  .form-control.error input {
+    border-color: #ff3860;
+  }
+
+  .form-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
   }
 }
-
 @media screen and (max-width: 1400px) and (max-height: 760px) {
   #left-panel {
     padding: 1.5rem 2.5rem;
