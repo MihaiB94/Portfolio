@@ -1381,321 +1381,321 @@ body {
     }
   }
 
-  @media screen and (max-width: 1400px) and (max-height: 760px) {
-    #left-panel {
-      padding: 1.5rem 2.5rem;
+  // No border radius on mobile version
+  textarea,
+  input[type='text'],
+  input[type='email'],
+  input[type='button'],
+  input[type='submit'] {
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+}
 
-      .top-left--text {
-        line-height: 1.5;
-        .about-title {
-          font-size: 1.7rem;
-          font-weight: 600;
-          color: $secondary-color;
-        }
+@media screen and (max-width: 1400px) and (max-height: 760px) {
+  #left-panel {
+    padding: 1.5rem 2.5rem;
 
-        p {
-          font-size: 0.95rem;
-          color: $primary-color;
-          margin-bottom: 1rem;
-        }
+    .top-left--text {
+      line-height: 1.5;
+      .about-title {
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: $secondary-color;
       }
 
-      .modal-about--section {
-        padding-top: 0;
+      p {
+        font-size: 0.95rem;
+        color: $primary-color;
+        margin-bottom: 1rem;
       }
+    }
 
-      .skills {
-        .cards {
-          .card {
-            i {
-              padding: 0.5rem 2.5rem;
-              font-size: 2.5rem;
-            }
+    .modal-about--section {
+      padding-top: 0;
+    }
+
+    .skills {
+      .cards {
+        .card {
+          i {
+            padding: 0.5rem 2.5rem;
+            font-size: 2.5rem;
           }
         }
       }
     }
   }
+}
 
-  @media screen and (max-width: 1400px) {
-    /* scroll Top/Up Button */
-    .scroll-top {
-      right: 1rem;
-      font-size: 0.9rem;
+@media screen and (max-width: 1400px) {
+  /* scroll Top/Up Button */
+  .scroll-top {
+    right: 1rem;
+    font-size: 0.9rem;
+  }
+
+  // Intro section
+  .intro {
+    .hero__container {
+      width: 95vw;
+      justify-content: start;
+      transition: all 0.5s ease-out;
     }
-
-    // Intro section
-    .intro {
-      .hero__container {
-        width: 95vw;
-        justify-content: start;
-        transition: all 0.5s ease-out;
-      }
-      .socials {
-        margin-left: 1.5rem;
-        transition: all 0.4s ease-out;
-      }
+    .socials {
+      margin-left: 1.5rem;
+      transition: all 0.4s ease-out;
     }
+  }
 
-    // Projects section
-    #projects {
-      padding: 3rem 8rem;
-      transition: all 0.5s ease;
-    }
+  // Projects section
+  #projects {
+    padding: 3rem 8rem;
+    transition: all 0.5s ease;
+  }
 
-    // Form Section
-    .contact {
-      padding: 4rem 6rem;
-      .contact-container {
-        min-width: 100%;
+  // Form Section
+  .contact {
+    padding: 4rem 6rem;
+    .contact-container {
+      min-width: 100%;
+      transition: all 0.5s ease 0s;
+      min-height: 500px;
+
+      .contact-info {
+        top: 0;
+        left: 0;
+        width: 300px;
         transition: all 0.5s ease 0s;
-        min-height: 500px;
+        height: 100%;
 
-        .contact-info {
-          top: 0;
-          left: 0;
-          width: 300px;
-          transition: all 0.5s ease 0s;
-          height: 100%;
+        padding: 40px 25px;
 
-          padding: 40px 25px;
+        .form-socials {
+          li {
+            margin-right: 0.85rem;
 
-          .form-socials {
-            li {
-              margin-right: 0.85rem;
-
-              a {
-                font-size: 0.9rem;
-              }
+            a {
+              font-size: 0.9rem;
             }
           }
         }
+      }
 
-        .contact-form {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-          margin-left: 0;
-          padding-left: 350px;
-          width: 100%;
-          transition: all 0.5s ease 0s;
-          height: 100%;
-        }
+        margin-left: 0;
+        padding-left: 350px;
+        width: 100%;
+        transition: all 0.5s ease 0s;
+        height: 100%;
       }
     }
   }
+}
 
-  @media screen and (max-width: 1200px) {
-    #left-panel {
-      width: 850px;
-      transition: width 0.5s ease 0s;
-      padding: 2rem 2.5rem;
-      background: $primary-text--color;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+@media screen and (max-width: 1200px) {
+  #left-panel {
+    width: 850px;
+    transition: width 0.5s ease 0s;
+    padding: 2rem 2.5rem;
+    background: $primary-text--color;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-      .close-btn {
-        display: block;
+    .close-btn {
+      display: block;
+    }
+
+    .top-left--text {
+      line-height: 1.5;
+      .about-title {
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: $secondary-color;
       }
 
-      .top-left--text {
-        line-height: 1.5;
-        .about-title {
-          font-size: 1.7rem;
-          font-weight: 600;
+      p {
+        font-size: 0.95rem;
+        color: $primary-color;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .modal-about--section {
+      padding-top: 1rem;
+      align-items: center;
+
+      .modal__img {
+        float: left;
+        margin: 0 1.5rem 0 0;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+        max-width: 200px;
+        max-height: 200px;
+      }
+
+      .modal__about {
+        color: $primary-color;
+
+        h4 {
+          font-size: 1.3rem;
           color: $secondary-color;
         }
 
-        p {
-          font-size: 0.95rem;
-          color: $primary-color;
-          margin-bottom: 1rem;
-        }
-      }
-
-      .modal-about--section {
-        padding-top: 1rem;
-        align-items: center;
-
-        .modal__img {
-          float: left;
-          margin: 0 1.5rem 0 0;
-          border-radius: 5px;
-          box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-          max-width: 200px;
-          max-height: 200px;
+        h1 {
+          font-size: 1.7rem;
+          font-weight: 500;
+          padding: 0.6rem 0 0.8rem 0;
         }
 
-        .modal__about {
-          color: $primary-color;
-
-          h4 {
-            font-size: 1.3rem;
-            color: $secondary-color;
-          }
-
-          h1 {
-            font-size: 1.7rem;
-            font-weight: 500;
-            padding: 0.6rem 0 0.8rem 0;
-          }
-
-          .about-me--description {
-            line-height: 1.6;
-            font-size: 1rem;
-          }
-        }
-      }
-
-      .skills {
-        margin-top: 2rem;
-
-        .cards {
-          .card {
-            i {
-              padding: 0.5rem 2.5rem;
-            }
-          }
+        .about-me--description {
+          line-height: 1.6;
+          font-size: 1rem;
         }
       }
     }
 
-    #right-panel {
-      display: none;
-    }
+    .skills {
+      margin-top: 2rem;
 
-    // Form Section
-    .contact-form {
-      padding: 2rem;
+      .cards {
+        .card {
+          i {
+            padding: 0.5rem 2.5rem;
+          }
+        }
+      }
     }
   }
 
-  @media screen and (max-width: 1025px) {
-    .navbar {
-      .navbar__container {
-        margin: 0rem 2.5rem;
+  #right-panel {
+    display: none;
+  }
+
+  // Form Section
+  .contact-form {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .navbar {
+    .navbar__container {
+      margin: 0rem 2.5rem;
+      transition: all 0.5s ease;
+    }
+  }
+
+  // Intro section
+  .intro {
+    .hero__container {
+      width: 100vw;
+      transition: all 0.5s ease;
+
+      .info {
+        margin: 0 6rem;
+        transition: all 0.5s ease;
+        z-index: 2;
+      }
+    }
+  }
+
+  // Projects section
+  #projects {
+    padding: 3rem 6rem;
+    transition: all 0.5s ease;
+
+    .item {
+      overflow: hidden;
+      .right {
+        padding: 1rem 2rem;
         transition: all 0.5s ease;
       }
     }
+  }
 
-    // Intro section
-    .intro {
-      .hero__container {
-        width: 100vw;
-        transition: all 0.5s ease;
+  // Form Section
+  .contact {
+    transition: all 0.5s ease;
+    .contact-container {
+      transition: none;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
 
-        .info {
-          margin: 0 6rem;
-          transition: all 0.5s ease;
-          z-index: 2;
-        }
-      }
-    }
-
-    // Projects section
-    #projects {
-      padding: 3rem 6rem;
-      transition: all 0.5s ease;
-
-      .item {
-        overflow: hidden;
-        .right {
-          padding: 1rem 2rem;
-          transition: all 0.5s ease;
-        }
-      }
-    }
-
-    // Form Section
-    .contact {
-      transition: all 0.5s ease;
-      .contact-container {
+      .contact-info {
         transition: none;
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: auto;
+
+        padding: 3rem 2rem;
+
+        .contact-info-heading {
+          color: $secondary-color;
+        }
+      }
+
+      .contact-form {
+        transition: none;
+        position: unset;
         margin: 0;
+        padding: 2rem;
+        width: 100%;
+      }
+    }
+  }
+}
 
-        .contact-info {
-          transition: none;
-          position: relative;
-          width: 100%;
-          height: auto;
+@media screen and (max-width: 900px) {
+  #modal {
+    top: 5%;
+    max-height: 90vh;
+  }
 
-          padding: 3rem 2rem;
+  #left-panel {
+    padding: 1.5rem 2.5rem;
+  }
 
-          .contact-info-heading {
-            color: $secondary-color;
-          }
-        }
+  // Projects section
+  #projects {
+    .item {
+      &:nth-child(even) .left {
+        margin-left: -180px;
+        transition: all 0.5s ease;
+      }
 
-        .contact-form {
-          transition: none;
-          position: unset;
-          margin: 0;
-          padding: 2rem;
-          width: 100%;
-        }
+      .right {
+        margin-left: -180px;
+        transition: all 0.5s ease;
       }
     }
   }
 
-  @media screen and (max-width: 900px) {
-    #modal {
-      top: 5%;
-      max-height: 90vh;
-    }
+  // Form Section
+  .contact {
+    .contact-container {
+      .form-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 30px;
 
-    #left-panel {
-      padding: 1.5rem 2.5rem;
-    }
-
-    // Projects section
-    #projects {
-      .item {
-        &:nth-child(even) .left {
-          margin-left: -180px;
-          transition: all 0.5s ease;
-        }
-
-        .right {
-          margin-left: -180px;
-          transition: all 0.5s ease;
-        }
-      }
-    }
-
-    // Form Section
-    .contact {
-      .contact-container {
-        .form-box {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          flex-wrap: wrap;
-          padding-top: 30px;
-
-          .w50 {
-            width: 100% !important;
-          }
+        .w50 {
+          width: 100% !important;
         }
       }
     }
   }
+}
 
-  @media screen and (max-width: 768px) {
-    // No border radius on mobile version
-    textarea,
-    input[type='text'],
-    input[type='email'],
-    input[type='button'],
-    input[type='submit'] {
-      -webkit-appearance: none;
-      border-radius: 0;
-    }
-  }
-
+@media screen and (max-width: 768px) {
   /* scroll Top/Up Button */
   .scroll-top {
     visibility: hidden;
