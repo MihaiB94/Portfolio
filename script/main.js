@@ -246,57 +246,50 @@ tl.fromTo(
   0
 );
 
-// Contact Form Check Success/Error
+// // Contact Form Check Success/Error
 
-const form = document.getElementById('contact-form');
-const fullName = document.getElementById('name');
-const email = document.getElementById('email');
+// const form = document.getElementById('contact-form');
+// const fullName = document.getElementById('name');
+// const email = document.getElementById('email');
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+// form.addEventListener('submit', (e) => {
+//   checkInputs();
+// });
 
-  validateInputs();
-});
+// function checkInputs() {
+//   // trim to remove the whitespaces
+//   const fullNameValue = fullName.value;
+//   const emailValue = email.value.trim();
 
-const setError = (element, message) => {
-  const formControl = element.parentElement;
-  const errorDisplay = formControl.querySelector('.error');
+//   if (fullNameValue === '') {
+//     setErrorFor(fullName, 'Name cannot be blank');
+//   } else {
+//     setSuccessFor(fullName);
+//   }
 
-  errorDisplay.innerText = message;
-  formControl.classList.add('error');
-  formControl.classList.remove('success');
-};
+//   if (emailValue === '') {
+//     setErrorFor(email, 'Email cannot be blank');
+//   } else if (!isEmail(emailValue)) {
+//     setErrorFor(email, 'Not a valid email');
+//   } else {
+//     setSuccessFor(email);
+//   }
+// }
 
-const setSuccess = (element) => {
-  const formControl = element.parentElement;
-  const errorDisplay = formControl.querySelector('.error');
+// function setErrorFor(input, message) {
+//   const formControl = input.parentElement;
+//   const small = formControl.querySelector('small');
+//   formControl.className = 'form-control error w50';
+//   small.innerText = message;
+// }
 
-  errorDisplay.innerText = '';
-  formControl.classList.add('success');
-  formControl.classList.remove('error');
-};
+// function setSuccessFor(input) {
+//   const formControl = input.parentElement;
+//   formControl.className = 'form-control success w50';
+// }
 
-const isValidEmail = (email) => {
-  const re =
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(email).toLowerCase());
-};
-
-const validateInputs = () => {
-  const fullNameValue = fullName.value.trim();
-  const emailValue = email.value.trim();
-
-  if (fullNameValue === '') {
-    setError(fullName, 'Username is required');
-  } else {
-    setSuccess(fullName);
-  }
-
-  if (emailValue === '') {
-    setError(email, 'Email is required');
-  } else if (!isValidEmail(emailValue)) {
-    setError(email, 'Provide a valid email address');
-  } else {
-    setSuccess(email);
-  }
-};
+// function isEmail(email) {
+//   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+//     email
+//   );
+// }
