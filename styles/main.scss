@@ -658,7 +658,7 @@ body {
     padding-top: 2rem;
     align-items: center;
 
-    .about__img {
+    .modal__img {
       margin: 0 1.5rem 0 0;
       border-radius: 5px;
       box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
@@ -666,7 +666,7 @@ body {
       max-height: 200px;
     }
 
-    .mobile__about {
+    .modal__about {
       color: $primary-color;
 
       h4 {
@@ -864,7 +864,7 @@ body {
   justify-content: space-around;
   width: 100%;
   height: 100vh;
-  padding: 6rem 3rem;
+  padding: 4rem 3rem;
   background: $primary-text--color;
 
   .top-left--text {
@@ -872,7 +872,7 @@ body {
     flex-direction: column;
     line-height: 1.5;
     .about-title {
-      font-size: 2rem;
+      font-size: 2.3rem;
       font-weight: 600;
       color: $secondary-color;
       text-transform: uppercase;
@@ -884,12 +884,12 @@ body {
     }
   }
 
-  .mobile-about--section {
+  .modal-about--section {
     display: flex;
     padding-top: 1rem;
     align-items: center;
 
-    .about__img {
+    .modal__img {
       float: left;
       border-radius: 5px;
       box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
@@ -897,7 +897,7 @@ body {
       max-height: 200px;
     }
 
-    .mobile__about {
+    .modal__about {
       padding: 0 2rem;
       color: $primary-color;
 
@@ -1410,7 +1410,7 @@ body {
       }
     }
 
-    .mobile-about--section {
+    .modal-about--section {
       padding-top: 0;
     }
 
@@ -1523,11 +1523,11 @@ body {
       }
     }
 
-    .mobile-about--section {
+    .modal-about--section {
       padding-top: 1rem;
       align-items: center;
 
-      .about__img {
+      .modal__img {
         float: left;
         margin: 0 1.5rem 0 0;
         border-radius: 5px;
@@ -1536,7 +1536,7 @@ body {
         max-height: 200px;
       }
 
-      .mobile__about {
+      .modal__about {
         color: $primary-color;
 
         h4 {
@@ -1897,6 +1897,104 @@ body {
 
 @media screen and (max-width: 680px) {
   #about-section {
+    .modal-about--section {
+      display: inline-block;
+
+      .modal__img {
+        margin: 0 2rem 0 0;
+      }
+
+      .modal__about {
+        padding: 1rem 0 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  // Intro section
+  .intro {
+    .hero__container {
+      .info {
+        margin: 0 3rem;
+        transition: all 0.5s ease;
+      }
+    }
+  }
+
+  #about-section {
+    padding: 4rem 2rem;
+
+    .modal-about--section {
+      .modal__img {
+        margin: 0 1rem 0 0;
+        max-width: 150px;
+        max-height: 150px;
+      }
+
+      .modal__about {
+        padding: 0;
+
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .skills {
+      .cards {
+        .card {
+          i {
+            padding: 0.5rem 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  // Projects section
+  #projects {
+    padding: 3rem;
+  }
+
+  // Form Section
+  .contact {
+    padding: 4rem 0rem 1rem;
+
+    .contact-container {
+      padding: 0 1.5rem;
+      padding-top: 0;
+
+      .contact-info {
+        .form-socials {
+          padding: 0;
+          padding-top: 3rem;
+
+          li {
+            a {
+              text-decoration: none;
+              color: $secondary-text--color;
+              font-size: 1rem;
+              padding-right: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  // Intro section
+  .intro {
+    .hero__container {
+      .info {
+        margin: 0 1.5rem;
+        transition: all 0.5s ease;
+      }
+    }
+  }
+
+  #about-section {
     align-items: center;
     padding: 6rem 1.5rem;
 
@@ -1905,16 +2003,16 @@ body {
       margin-bottom: 2rem;
     }
 
-    .mobile-about--section {
+    .modal-about--section {
       display: flex;
       flex-direction: column;
 
-      .about__img {
+      .modal__img {
         max-width: 200px;
         max-height: 200px;
       }
 
-      .mobile__about {
+      .modal__about {
         padding: 0;
         padding-top: 2rem;
 
@@ -1927,124 +2025,24 @@ body {
         }
       }
     }
-  }
 
-  @media screen and (max-width: 600px) {
-    // Intro section
-    .intro {
-      .hero__container {
-        .info {
-          margin: 0 3rem;
-          transition: all 0.5s ease;
-        }
-      }
-    }
+    .skills {
+      margin-top: 2rem;
 
-    #about-section {
-      padding: 6rem 2rem;
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
 
-      .skills {
-        .cards {
-          .card {
-            i {
-              padding: 0.5rem 2rem;
-            }
-          }
-        }
-      }
-    }
-
-    // Projects section
-    #projects {
-      padding: 3rem;
-    }
-
-    // Form Section
-    .contact {
-      padding: 4rem 0rem 1rem;
-
-      .contact-container {
-        padding: 0 1.5rem;
-        padding-top: 0;
-
-        .contact-info {
-          .form-socials {
-            padding: 0;
-            padding-top: 3rem;
-
-            li {
-              a {
-                text-decoration: none;
-                color: $secondary-text--color;
-                font-size: 1rem;
-                padding-right: 1rem;
-              }
-            }
+        .card {
+          i {
+            padding: 0.5rem 0;
           }
         }
       }
     }
   }
-  @media screen and (max-width: 480px) {
-    // Intro section
-    .intro {
-      .hero__container {
-        .info {
-          margin: 0 1.5rem;
-          transition: all 0.5s ease;
-        }
-      }
-    }
-    #about-section {
-      align-items: center;
-      padding: 6rem 1.5rem;
 
-      .top-left--text {
-        align-items: center;
-        margin-bottom: 2rem;
-      }
-
-      .mobile-about--section {
-        display: flex;
-        flex-direction: column;
-
-        .about__img {
-          max-width: 200px;
-          max-height: 200px;
-        }
-
-        .mobile__about {
-          padding: 0;
-          padding-top: 2rem;
-
-          h4 {
-            text-align: center;
-          }
-
-          h1 {
-          }
-          .about-me--description {
-            text-align: center;
-          }
-        }
-      }
-      .skills {
-        margin-top: 2rem;
-
-        .cards {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          grid-gap: 2rem;
-
-          .card {
-            i {
-              padding: 0.5rem 0;
-            }
-          }
-        }
-      }
-    }
-  }
   // Projects section
   #projects {
     padding: 1.5rem;
