@@ -252,10 +252,7 @@ const form = document.getElementById('contact-form');
 const fullName = document.getElementById('name');
 const email = document.getElementById('email');
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  checkInputs();
-});
+form.addEventListener('submit', checkInputs);
 
 function checkInputs() {
   // trim to remove the whitespaces
