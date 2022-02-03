@@ -1323,6 +1323,7 @@ body {
             &:focus ~ .input-txt,
             &:not(:placeholder-shown) ~ .input-txt {
               transform: translateY(-25px);
+              transition: transform 0.3s ease-in-out;
               font-size: 0.9rem;
               letter-spacing: 1px;
               font-weight: 400;
