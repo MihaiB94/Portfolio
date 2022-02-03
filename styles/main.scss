@@ -812,11 +812,11 @@ body {
 
           &:focus ~ .input-txt,
           &:not(:placeholder-shown) ~ .input-txt {
-            transform: translateY(-25px);
+            transform: translateY(-30px);
             font-size: 0.9rem;
             letter-spacing: 1px;
             font-weight: 400;
-            color: $secondary-text--color;
+            color: $primary-text--color;
           }
         }
 
@@ -1287,6 +1287,7 @@ body {
         color: $secondary-color;
         font-size: 1.5rem;
         font-weight: 500;
+        margin-bottom: 1rem;
       }
 
       .form-box {
@@ -1321,11 +1322,11 @@ body {
 
             &:focus ~ .input-txt,
             &:not(:placeholder-shown) ~ .input-txt {
-              transform: translateY(-20px);
-              font-size: 0.8rem;
+              transform: translateY(-25px);
+              font-size: 0.9rem;
               letter-spacing: 1px;
               font-weight: 400;
-              color: $primary-color;
+              color: $secondary-color;
             }
           }
 
@@ -1380,6 +1381,7 @@ body {
     }
   }
 
+  // No border radius on mobile version
   textarea,
   input[type='text'],
   input[type='button'],
@@ -2246,12 +2248,4 @@ body {
       }
     }
   }
-}
-
-.txt-up {
-  transform: translateY(-20px);
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  font-weight: 400;
-  color: $primary-color;
 }

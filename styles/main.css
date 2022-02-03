@@ -1139,12 +1139,12 @@ body {
 #right-panel .contact-form .form-box .form-control input:not(:placeholder-shown) ~ .input-txt,
 #right-panel .contact-form .form-box .form-control textarea:focus ~ .input-txt,
 #right-panel .contact-form .form-box .form-control textarea:not(:placeholder-shown) ~ .input-txt {
-  -webkit-transform: translateY(-25px);
-          transform: translateY(-25px);
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
   font-size: 0.9rem;
   letter-spacing: 1px;
   font-weight: 400;
-  color: #feffff;
+  color: #def2f1;
 }
 
 #right-panel .contact-form .form-box .form-control textarea {
@@ -1712,6 +1712,7 @@ body {
   color: #2b7a78;
   font-size: 1.5rem;
   font-weight: 500;
+  margin-bottom: 1rem;
 }
 
 .contact .contact-container .contact-form .form-box {
@@ -1757,12 +1758,12 @@ body {
 .contact .contact-container .contact-form .form-box .form-control input:not(:placeholder-shown) ~ .input-txt,
 .contact .contact-container .contact-form .form-box .form-control textarea:focus ~ .input-txt,
 .contact .contact-container .contact-form .form-box .form-control textarea:not(:placeholder-shown) ~ .input-txt {
-  -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
-  font-size: 0.8rem;
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
+  font-size: 0.9rem;
   letter-spacing: 1px;
   font-weight: 400;
-  color: #17252a;
+  color: #2b7a78;
 }
 
 .contact .contact-container .contact-form .form-box .form-control textarea {
@@ -2531,14 +2532,5 @@ body {
   #projects .item .right .ext-links .buttons .source-code {
     margin: 0 2rem;
   }
-}
-
-.txt-up {
-  -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  font-weight: 400;
-  color: #17252a;
 }
 /*# sourceMappingURL=main.css.map */
