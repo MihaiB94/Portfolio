@@ -1740,20 +1740,6 @@ body {
   margin: 0 0 35px 0;
 }
 
-.contact .contact-container .contact-form .form-box .form-control i {
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-  right: 10px;
-}
-
-.contact .contact-container .contact-form .form-box .form-control small {
-  visibility: hidden;
-  position: absolute;
-  top: -20px;
-  right: 40px;
-}
-
 .contact .contact-container .contact-form .form-box .form-control input,
 .contact .contact-container .contact-form .form-box .form-control textarea {
   width: 100% !important;
@@ -1767,10 +1753,10 @@ body {
   outline: none;
 }
 
-.contact .contact-container .contact-form .form-box .form-control input:focus ~ span,
-.contact .contact-container .contact-form .form-box .form-control input:valid ~ span,
-.contact .contact-container .contact-form .form-box .form-control textarea:focus ~ span,
-.contact .contact-container .contact-form .form-box .form-control textarea:valid ~ span {
+.contact .contact-container .contact-form .form-box .form-control input:focus ~ .input-txt,
+.contact .contact-container .contact-form .form-box .form-control input:not(:placeholder-shown) ~ .input-txt,
+.contact .contact-container .contact-form .form-box .form-control textarea:focus ~ .input-txt,
+.contact .contact-container .contact-form .form-box .form-control textarea:not(:placeholder-shown) ~ .input-txt {
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
   font-size: 0.8rem;
@@ -2545,5 +2531,14 @@ body {
   #projects .item .right .ext-links .buttons .source-code {
     margin: 0 2rem;
   }
+}
+
+.txt-up {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: #17252a;
 }
 /*# sourceMappingURL=main.css.map */

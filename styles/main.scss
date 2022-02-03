@@ -1307,20 +1307,6 @@ body {
           position: relative;
           margin: 0 0 35px 0;
 
-          i {
-            visibility: hidden;
-            position: absolute;
-            top: 0;
-            right: 10px;
-          }
-
-          small {
-            visibility: hidden;
-            position: absolute;
-            top: -20px;
-            right: 40px;
-          }
-
           input,
           textarea {
             width: 100% !important;
@@ -1333,8 +1319,8 @@ body {
             border-bottom: 1px solid #777;
             outline: none;
 
-            &:focus ~ span,
-            &:valid ~ span {
+            &:focus ~ .input-txt,
+            &:not(:placeholder-shown) ~ .input-txt {
               transform: translateY(-20px);
               font-size: 0.8rem;
               letter-spacing: 1px;
@@ -2260,4 +2246,12 @@ body {
       }
     }
   }
+}
+
+.txt-up {
+  transform: translateY(-20px);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: $primary-color;
 }
