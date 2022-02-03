@@ -968,7 +968,7 @@ body {
           align-items: center;
 }
 
-#left-panel .modal-about--section .modal__img {
+#left-panel .modal-about--section .about__img {
   margin: 0 1.5rem 0 0;
   border-radius: 5px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
@@ -977,22 +977,22 @@ body {
   max-height: 200px;
 }
 
-#left-panel .modal-about--section .modal__about {
+#left-panel .modal-about--section .mobile__about {
   color: #17252a;
 }
 
-#left-panel .modal-about--section .modal__about h4 {
+#left-panel .modal-about--section .mobile__about h4 {
   font-size: 1.3rem;
   color: #2b7a78;
 }
 
-#left-panel .modal-about--section .modal__about h1 {
+#left-panel .modal-about--section .mobile__about h1 {
   font-size: 1.7rem;
   font-weight: 500;
   padding: 0.6rem 0 0.8rem 0;
 }
 
-#left-panel .modal-about--section .modal__about .about-me--description {
+#left-panel .modal-about--section .mobile__about .about-me--description {
   line-height: 1.6;
   font-size: 1rem;
 }
@@ -1217,7 +1217,7 @@ body {
   color: #17252a;
 }
 
-#about-section .modal-about--section {
+#about-section .mobile-about--section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1227,7 +1227,7 @@ body {
           align-items: center;
 }
 
-#about-section .modal-about--section .modal__img {
+#about-section .mobile-about--section .about__img {
   float: left;
   border-radius: 5px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
@@ -1236,23 +1236,23 @@ body {
   max-height: 200px;
 }
 
-#about-section .modal-about--section .modal__about {
+#about-section .mobile-about--section .mobile__about {
   padding: 0 2rem;
   color: #17252a;
 }
 
-#about-section .modal-about--section .modal__about h4 {
+#about-section .mobile-about--section .mobile__about h4 {
   font-size: 1.3rem;
   color: #2b7a78;
 }
 
-#about-section .modal-about--section .modal__about h1 {
+#about-section .mobile-about--section .mobile__about h1 {
   font-size: 1.7rem;
   font-weight: 500;
   padding: 0.6rem 0 0.8rem 0;
 }
 
-#about-section .modal-about--section .modal__about .about-me--description {
+#about-section .mobile-about--section .mobile__about .about-me--description {
   line-height: 1.6;
   font-size: 1rem;
 }
@@ -1827,7 +1827,7 @@ body {
     color: #17252a;
     margin-bottom: 1rem;
   }
-  #left-panel .modal-about--section {
+  #left-panel .mobile-about--section {
     padding-top: 0;
   }
   #left-panel .skills .cards .card i {
@@ -1930,13 +1930,13 @@ body {
     color: #17252a;
     margin-bottom: 1rem;
   }
-  #left-panel .modal-about--section {
+  #left-panel .mobile-about--section {
     padding-top: 1rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  #left-panel .modal-about--section .modal__img {
+  #left-panel .mobile-about--section .about__img {
     float: left;
     margin: 0 1.5rem 0 0;
     border-radius: 5px;
@@ -1945,19 +1945,19 @@ body {
     max-width: 200px;
     max-height: 200px;
   }
-  #left-panel .modal-about--section .modal__about {
+  #left-panel .mobile-about--section .mobile__about {
     color: #17252a;
   }
-  #left-panel .modal-about--section .modal__about h4 {
+  #left-panel .mobile-about--section .mobile__about h4 {
     font-size: 1.3rem;
     color: #2b7a78;
   }
-  #left-panel .modal-about--section .modal__about h1 {
+  #left-panel .mobile-about--section .mobile__about h1 {
     font-size: 1.7rem;
     font-weight: 500;
     padding: 0.6rem 0 0.8rem 0;
   }
-  #left-panel .modal-about--section .modal__about .about-me--description {
+  #left-panel .mobile-about--section .mobile__about .about-me--description {
     line-height: 1.6;
     font-size: 1rem;
   }
@@ -2279,18 +2279,44 @@ body {
 }
 
 @media screen and (max-width: 680px) {
-  #about-section .modal-about--section {
-    display: inline-block;
+  #about-section {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 6rem 1.5rem;
   }
-  #about-section .modal-about--section .modal__img {
-    margin: 0 2rem 0 0;
+  #about-section .top-left--text {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 2rem;
   }
-  #about-section .modal-about--section .modal__about {
-    padding: 1rem 0 2rem;
+  #about-section .mobile-about--section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #about-section .mobile-about--section .about__img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+  #about-section .mobile-about--section .mobile__about {
+    padding: 0;
+    padding-top: 2rem;
+  }
+  #about-section .mobile-about--section .mobile__about h4 {
+    text-align: center;
+  }
+  #about-section .mobile-about--section .mobile__about h1 {
+    text-align: center;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 680px) and (max-width: 600px) {
   .intro .hero__container .info {
     margin: 0 3rem;
     -webkit-transition: all 0.5s ease;
@@ -2298,17 +2324,6 @@ body {
   }
   #about-section {
     padding: 6rem 2rem;
-  }
-  #about-section .modal-about--section .modal__img {
-    margin: 0 1rem 0 0;
-    max-width: 150px;
-    max-height: 150px;
-  }
-  #about-section .modal-about--section .modal__about {
-    padding: 0;
-  }
-  #about-section .modal-about--section .modal__about h1 {
-    font-size: 1.5rem;
   }
   #about-section .skills .cards .card i {
     padding: 0.5rem 2rem;
@@ -2335,7 +2350,7 @@ body {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 680px) and (max-width: 480px) {
   .intro .hero__container .info {
     margin: 0 1.5rem;
     -webkit-transition: all 0.5s ease;
@@ -2353,7 +2368,7 @@ body {
             align-items: center;
     margin-bottom: 2rem;
   }
-  #about-section .modal-about--section {
+  #about-section .mobile-about--section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2362,18 +2377,18 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #about-section .modal-about--section .modal__img {
+  #about-section .mobile-about--section .about__img {
     max-width: 200px;
     max-height: 200px;
   }
-  #about-section .modal-about--section .modal__about {
+  #about-section .mobile-about--section .mobile__about {
     padding: 0;
     padding-top: 2rem;
   }
-  #about-section .modal-about--section .modal__about h4 {
+  #about-section .mobile-about--section .mobile__about h4 {
     text-align: center;
   }
-  #about-section .modal-about--section .modal__about h1 {
+  #about-section .mobile-about--section .mobile__about .about-me--description {
     text-align: center;
   }
   #about-section .skills {
@@ -2389,6 +2404,9 @@ body {
   #about-section .skills .cards .card i {
     padding: 0.5rem 0;
   }
+}
+
+@media screen and (max-width: 680px) {
   #projects {
     padding: 1.5rem;
   }
