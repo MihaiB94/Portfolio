@@ -2500,6 +2500,9 @@ body {
 }
 
 @media screen and (max-width: 300px) {
+  #about-section .modal-about--section .modal__about h4 {
+    text-align: left;
+  }
   #about-section .skills .cards {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);

@@ -2196,6 +2196,13 @@ body {
 
 @media screen and (max-width: 300px) {
   #about-section {
+    .modal-about--section {
+      .modal__about {
+        h4 {
+          text-align: left;
+        }
+      }
+    }
     .skills {
       .cards {
         grid-template-columns: repeat(2, 1fr);
