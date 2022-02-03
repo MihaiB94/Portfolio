@@ -356,27 +356,27 @@
 
           <div class="contact-form">
             <h2 class="contact-form-heading">Send a Message</h2>
-            <div class="form-box">
+            <form class="form-box" id="contact-form" method="POST" data-netlify="true">
               <div class="form-control w100">
-                <input type="text" name="" id="" required />
+                <input placeholder=" " type="text" name="name" id="name"  required />
                 <span>Name</span>
                 
               </div>
 
               <div class="form-control w100">
-                <input type="text" name="" id="" required />
+                <input placeholder=" " type="email" name="email" id="email" required />
                 <span>Email Adress</span>
                 
               </div>
 
               <div class="form-control w100">
-                <textarea name="" id="" required></textarea>
+                <textarea placeholder=" " name="message" required></textarea>
                 <span>Write your message here...</span>
               </div>
               <div class="form-control w100">
                 <input type="submit" name="" id="" value="Send" />
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

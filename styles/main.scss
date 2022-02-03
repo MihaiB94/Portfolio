@@ -810,8 +810,8 @@ body {
           outline: none;
           background-color: $primary-color;
 
-          &:focus ~ span,
-          &:valid ~ span {
+          &:focus ~ .input-txt,
+          &:not(:placeholder-shown) ~ .input-txt {
             transform: translateY(-25px);
             font-size: 0.9rem;
             letter-spacing: 1px;

@@ -1135,10 +1135,10 @@ body {
   background-color: #17252a;
 }
 
-#right-panel .contact-form .form-box .form-control input:focus ~ span,
-#right-panel .contact-form .form-box .form-control input:valid ~ span,
-#right-panel .contact-form .form-box .form-control textarea:focus ~ span,
-#right-panel .contact-form .form-box .form-control textarea:valid ~ span {
+#right-panel .contact-form .form-box .form-control input:focus ~ .input-txt,
+#right-panel .contact-form .form-box .form-control input:not(:placeholder-shown) ~ .input-txt,
+#right-panel .contact-form .form-box .form-control textarea:focus ~ .input-txt,
+#right-panel .contact-form .form-box .form-control textarea:not(:placeholder-shown) ~ .input-txt {
   -webkit-transform: translateY(-25px);
           transform: translateY(-25px);
   font-size: 0.9rem;
