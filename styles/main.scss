@@ -1380,16 +1380,6 @@ body {
       }
     }
   }
-
-  // No border radius on mobile version
-  textarea,
-  input[type='text'],
-  input[type='email'],
-  input[type='button'],
-  input[type='submit'] {
-    -webkit-appearance: none;
-    border-radius: 0;
-  }
 }
 
 @media screen and (max-width: 1400px) and (max-height: 760px) {
@@ -1696,6 +1686,16 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  // No border radius on mobile version
+  textarea,
+  input[type='text'],
+  input[type='email'],
+  input[type='button'],
+  input[type='submit'] {
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+
   /* scroll Top/Up Button */
   .scroll-top {
     visibility: hidden;

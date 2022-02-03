@@ -1802,15 +1802,6 @@ body {
   margin-bottom: 3rem;
 }
 
-.contact textarea,
-.contact input[type='text'],
-.contact input[type='email'],
-.contact input[type='button'],
-.contact input[type='submit'] {
-  -webkit-appearance: none;
-  border-radius: 0;
-}
-
 @media screen and (max-width: 1400px) and (max-height: 760px) {
   #left-panel {
     padding: 1.5rem 2.5rem;
@@ -2088,6 +2079,14 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  textarea,
+  input[type='text'],
+  input[type='email'],
+  input[type='button'],
+  input[type='submit'] {
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
   /* scroll Top/Up Button */
   .scroll-top {
     visibility: hidden;
