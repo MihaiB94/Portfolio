@@ -1752,6 +1752,10 @@ body {
   border: none;
   border-bottom: 1px solid #777;
   outline: none;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .contact .contact-container .contact-form .form-box .form-control input:focus ~ .input-txt,

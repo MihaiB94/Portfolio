@@ -1320,6 +1320,8 @@ body {
             border-bottom: 1px solid #777;
             outline: none;
 
+            transition: transform 0.3s ease-in-out;
+
             &:focus ~ .input-txt,
             &:not(:placeholder-shown) ~ .input-txt {
               transform: translateY(-25px);
