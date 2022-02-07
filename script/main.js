@@ -238,21 +238,6 @@ $(document).ready(function () {
           // Start Active section link
           let currentScrollPos = window.pageYOffset;
           prevScrollpos = currentScrollPos;
-          var current = '';
-
-          sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            if (currentScrollPos >= sectionTop - 400) {
-              current = section.getAttribute('id');
-            }
-          });
-
-          navLi.forEach((a) => {
-            a.classList.remove('active');
-            if (a.href.includes(current)) {
-              a.classList.add('active');
-            }
-          });
         });
         // End Active section link
 
@@ -293,22 +278,6 @@ $(document).ready(function () {
 
         //Active Section
         prevScrollpos = currentScrollPos;
-
-        var current = '';
-
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          if (currentScrollPos >= sectionTop - 300) {
-            current = section.getAttribute('id');
-          }
-        });
-
-        navLi.forEach((a) => {
-          a.classList.remove('active');
-          if (a.href.includes(current)) {
-            a.classList.add('active');
-          }
-        });
       };
     }
   }
