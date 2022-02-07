@@ -80,7 +80,7 @@ window.onscroll = function () {
       logo.style.transition = 'all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)';
     }
   } else {
-    navbar.style.top = '-76px';
+    navbar.style.top = '-100px';
   }
 
   //Active Section
