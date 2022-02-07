@@ -89,19 +89,19 @@ window.onscroll = function () {
 
   var current = '';
 
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    if (currentScrollPos >= sectionTop - 300) {
-      current = section.getAttribute('id');
-    }
-  });
+  // sections.forEach((section) => {
+  //   const sectionTop = section.offsetTop;
+  //   if (currentScrollPos >= sectionTop - 300) {
+  //     current = section.getAttribute('id');
+  //   }
+  // });
 
-  navLi.forEach((a) => {
-    a.classList.remove('active');
-    if (a.href.includes(current)) {
-      a.classList.add('active');
-    }
-  });
+  // navLi.forEach((a) => {
+  //   a.classList.remove('active');
+  //   if (a.href.includes(current)) {
+  //     a.classList.add('active');
+  //   }
+  // });
 };
 // -----------------------END NAVBAR-----------------------//////////////
 
@@ -245,51 +245,3 @@ tl.fromTo(
   },
   0
 );
-
-// // Contact Form Check Success/Error
-
-// const form = document.getElementById('contact-form');
-// const fullName = document.getElementById('name');
-// const email = document.getElementById('email');
-
-// form.addEventListener('submit', (e) => {
-//   checkInputs();
-// });
-
-// function checkInputs() {
-//   // trim to remove the whitespaces
-//   const fullNameValue = fullName.value;
-//   const emailValue = email.value.trim();
-
-//   if (fullNameValue === '') {
-//     setErrorFor(fullName, 'Name cannot be blank');
-//   } else {
-//     setSuccessFor(fullName);
-//   }
-
-//   if (emailValue === '') {
-//     setErrorFor(email, 'Email cannot be blank');
-//   } else if (!isEmail(emailValue)) {
-//     setErrorFor(email, 'Not a valid email');
-//   } else {
-//     setSuccessFor(email);
-//   }
-// }
-
-// function setErrorFor(input, message) {
-//   const formControl = input.parentElement;
-//   const small = formControl.querySelector('small');
-//   formControl.className = 'form-control error w50';
-//   small.innerText = message;
-// }
-
-// function setSuccessFor(input) {
-//   const formControl = input.parentElement;
-//   formControl.className = 'form-control success w50';
-// }
-
-// function isEmail(email) {
-//   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-//     email
-//   );
-// }
