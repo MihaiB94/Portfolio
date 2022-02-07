@@ -56,39 +56,45 @@ if (scrollButton) {
 // -----------------------END Smooth scrolling--------------------------/////
 
 // -----------------------NAVBAR-----------------------//////////////////
-
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
 const sections = document.querySelectorAll('section');
 const navLi = document.querySelectorAll('nav ul li a');
+
 const navbar = document.querySelector('.navbar');
 const logo = document.querySelector('.svg_logo');
 
+let prevScrollpos = window.pageYOffset;
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
 $(document).ready(function () {
-  var previousScroll = 0;
-  $(window).scroll(function () {
-    var currentScroll = $(this).scrollTop();
-    if (currentScroll < 20) {
-      showTopNav();
-    } else if (
-      currentScroll > 0 &&
-      currentScroll < $(document).height() - $(window).height()
-    ) {
-      if (currentScroll > previousScroll) {
-        hideNav();
+  window.onscroll = function () {
+    let currentScrollPos = window.pageYOffset;
+
+    if (prevScrollpos > currentScrollPos) {
+      navbar.style.top = '0';
+      if (window.pageYOffset > '20') {
+        navbar.style.boxShadow =
+          'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px';
+        navbar.style.opacity = '0.98';
+
+        logo.style.padding = '0.5rem 0';
       } else {
-        showNav();
+        navbar.style.boxShadow = 'none';
+        logo.style.padding = '1.5rem 0';
+        logo.style.transition =
+          'all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)';
       }
-      previousScroll = currentScroll;
+    } else {
+      navbar.style.top = '-100px';
     }
 
-    // Start Active section link
-    let currentScrollPos = window.pageYOffset;
+    //Active Section
     prevScrollpos = currentScrollPos;
+
     var current = '';
 
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
-      if (currentScrollPos >= sectionTop - 400) {
+      if (currentScrollPos >= sectionTop - 300) {
         current = section.getAttribute('id');
       }
     });
@@ -99,19 +105,7 @@ $(document).ready(function () {
         a.classList.add('active');
       }
     });
-  });
-  // End Active section link
-
-  function hideNav() {
-    $('.navbar').removeClass('is-visible').addClass('is-hidden');
-  }
-
-  function showNav() {
-    $('.navbar')
-      .removeClass('is-hidden')
-      .addClass('is-visible')
-      .addClass('scrolling');
-  }
+  };
 });
 
 // -----------------------END NAVBAR-----------------------//////////////
@@ -256,53 +250,3 @@ tl.fromTo(
   },
   0
 );
-
-// Contact Form Check Success/Error
-
-const form = document.getElementById('contact-form');
-const fullName = document.getElementById('name');
-const email = document.getElementById('email');
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  checkInputs();
-});
-
-function checkInputs() {
-  // trim to remove the whitespaces
-  const fullNameValue = fullName.value;
-  const emailValue = email.value.trim();
-
-  if (fullNameValue === '') {
-    setErrorFor(fullName, 'Name cannot be blank');
-  } else {
-    setSuccessFor(fullName);
-  }
-
-  if (emailValue === '') {
-    setErrorFor(email, 'Email cannot be blank');
-  } else if (!isEmail(emailValue)) {
-    setErrorFor(email, 'Not a valid email');
-  } else {
-    setSuccessFor(email);
-  }
-}
-
-function setErrorFor(input, message) {
-  const formControl = input.parentElement;
-  const small = formControl.querySelector('small');
-  formControl.className = 'form-control error w50';
-  small.innerText = message;
-}
-
-function setSuccessFor(input) {
-  const formControl = input.parentElement;
-  formControl.className = 'form-control success w50';
-}
-
-function isEmail(email) {
-  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-    email
-  );
-}
