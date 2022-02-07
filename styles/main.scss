@@ -164,9 +164,7 @@ body {
   align-items: center;
   backdrop-filter: blur(5px);
   background: $primary-color;
-
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-
   z-index: 9;
 
   .navbar__container {
@@ -1916,6 +1914,36 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  .is-hidden {
+    top: -100px;
+    opacity: 0;
+    transition: transform 0.4s, opacity 0.2s;
+  }
+
+  .fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    transition: transform 0.4s, opacity 0.2s;
+
+    .navbar {
+      box-shadow: none;
+      opacity: 1;
+    }
+
+    .logo {
+      padding: 1.5rem 0;
+      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+  }
+
+  .navbar-hide {
+    pointer-events: none;
+    opacity: 0;
+  }
+
   // Intro section
   .intro {
     .hero__container {

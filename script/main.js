@@ -62,40 +62,7 @@ const navLi = document.querySelectorAll('nav ul li a');
 
 const navbar = document.querySelector('.navbar');
 const logo = document.querySelector('.svg_logo');
-
-var lastScrollTop; // This Varibale will store the top position
-
-window.addEventListener('scroll', function () {
-  //on every scroll this funtion will be called
-
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  //This line will get the location on scroll
-
-  if (scrollTop > lastScrollTop) {
-    //if it will be greater than the previous
-    navbar.style.top = '-100px';
-    //set the value to the negetive of height of navbar
-  } else {
-    navbar.style.top = '0';
-  }
-
-  lastScrollTop = scrollTop; //New Position Stored
-});
-// var current = '';
-
-// sections.forEach((section) => {
-//   const sectionTop = section.offsetTop;
-//   if (currentScrollPos >= sectionTop - 300) {
-//     current = section.getAttribute('id');
-//   }
-// });
-
-// navLi.forEach((a) => {
-//   a.classList.remove('active');
-//   if (a.href.includes(current)) {
-//     a.classList.add('active');
-//   }
-// });
+let prevScrollpos = window.pageYOffset;
 
 // -----------------------END NAVBAR-----------------------//////////////
 
@@ -239,3 +206,109 @@ tl.fromTo(
   },
   0
 );
+
+$(document).ready(function () {
+  $(window).on('resize', function (e) {
+    checkScreenSize();
+  });
+
+  checkScreenSize();
+
+  function checkScreenSize() {
+    var newWindowWidth = $(window).width();
+    if (newWindowWidth > 600) {
+      window.onscroll = function () {
+        let currentScrollPos = window.pageYOffset;
+
+        if (prevScrollpos > currentScrollPos) {
+          navbar.style.top = '0';
+          if (window.pageYOffset > '20') {
+            navbar.style.boxShadow =
+              'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px';
+            navbar.style.opacity = '0.98';
+
+            logo.style.padding = '0.5rem 0';
+          } else {
+            navbar.style.boxShadow = 'none';
+            logo.style.padding = '1.5rem 0';
+            logo.style.transition =
+              'all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)';
+          }
+        } else {
+          navbar.style.top = '-100px';
+        }
+
+        //Active Section
+        prevScrollpos = currentScrollPos;
+
+        var current = '';
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          if (currentScrollPos >= sectionTop - 300) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLi.forEach((a) => {
+          a.classList.remove('active');
+          if (a.href.includes(current)) {
+            a.classList.add('active');
+          }
+        });
+      };
+    } else {
+      /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+      $(document).ready(function () {
+        var previousScroll = 0;
+        $(window).scroll(function () {
+          var currentScroll = $(this).scrollTop();
+          if (currentScroll < 20) {
+            showTopNav();
+          } else if (
+            currentScroll > 0 &&
+            currentScroll < $(document).height() - $(window).height()
+          ) {
+            if (currentScroll > previousScroll) {
+              hideNav();
+            } else {
+              showNav();
+            }
+            previousScroll = currentScroll;
+          }
+
+          // Start Active section link
+          let currentScrollPos = window.pageYOffset;
+          prevScrollpos = currentScrollPos;
+          var current = '';
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            if (currentScrollPos >= sectionTop - 400) {
+              current = section.getAttribute('id');
+            }
+          });
+
+          navLi.forEach((a) => {
+            a.classList.remove('active');
+            if (a.href.includes(current)) {
+              a.classList.add('active');
+            }
+          });
+        });
+        // End Active section link
+
+        function hideNav() {
+          $('.navbar').removeClass('is-visible').addClass('is-hidden');
+        }
+
+        function showNav() {
+          $('.navbar')
+            .removeClass('is-hidden')
+            .addClass('is-visible')
+            .addClass('scrolling');
+        }
+      });
+    }
+  }
+});

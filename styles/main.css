@@ -2299,6 +2299,39 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  .is-hidden {
+    top: -100px;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.4s;
+    transition: opacity 0.2s, -webkit-transform 0.4s;
+    transition: transform 0.4s, opacity 0.2s;
+    transition: transform 0.4s, opacity 0.2s, -webkit-transform 0.4s;
+  }
+  .fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.4s;
+    transition: opacity 0.2s, -webkit-transform 0.4s;
+    transition: transform 0.4s, opacity 0.2s;
+    transition: transform 0.4s, opacity 0.2s, -webkit-transform 0.4s;
+  }
+  .fixed-top .navbar {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    opacity: 1;
+  }
+  .fixed-top .logo {
+    padding: 1.5rem 0;
+    -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  .navbar-hide {
+    pointer-events: none;
+    opacity: 0;
+  }
   .intro .hero__container .info {
     margin: 0 3rem;
     -webkit-transition: all 0.5s ease;
