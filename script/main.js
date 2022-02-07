@@ -85,9 +85,9 @@ window.onscroll = function () {
   }
 
   //Active Section
-  prevScrollpos = currentScrollPos;
+  // prevScrollpos = currentScrollPos;
 
-  var current = '';
+  // var current = '';
 
   // sections.forEach((section) => {
   //   const sectionTop = section.offsetTop;
