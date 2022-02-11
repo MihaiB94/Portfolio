@@ -142,7 +142,7 @@
     <section id="home-section" class="intro" >
       <div class="hero__container">
         <div class="info">
-          <h5 class="hero-animation1">Hi, my name is</h5>
+          <h5 class="hero-animation1 small-txt">Hi, my name is</h5>
           <h1 class="hero__title hero-animation2">Mihai Bordeniuc</h1>
           <!-- <h2 class="hero__description">I build things for the web.</h2> -->
           <h2 class="hero__sub-title hero-animation3">
@@ -357,6 +357,7 @@
           <div class="contact-form">
             <h2 class="contact-form-heading">Send a Message</h2>
             <form class="form-box" id="contact-form" method="POST" data-netlify="true">
+              
               <div class="form-control w100">
                 <input placeholder=" " type="text" name="name" id="name"  required />
                 <span class="input-txt">Name</span>
@@ -373,9 +374,16 @@
                 <textarea placeholder=" " name="message" required></textarea>
                 <span class="input-txt">Write your message here...</span>
               </div>
+
+              <div class="file-upload">
+                <input type="file" name="myfile" id="myfile" placeholder="Upload File"></input>  
+              </div>
+
               <div class="form-control w100">
                 <input type="submit" name="" id="" value="Send" />
               </div>
+
+            
             </form>
           </div>
         </div>
