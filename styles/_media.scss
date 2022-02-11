@@ -332,7 +332,8 @@
           align-items: flex-start;
           flex-direction: column;
           justify-content: center;
-          padding: 0 4rem;
+          padding: 0 5rem;
+
           position: absolute;
           top: 0;
           right: 0;
@@ -631,6 +632,16 @@
   }
 }
 @media only screen and (max-width: 480px) {
+  .navbar {
+    .navbar__container {
+      .nav {
+        .nav__list {
+          padding: 0 3rem;
+        }
+      }
+    }
+  }
+
   // Intro section
   .intro {
     .hero__container {

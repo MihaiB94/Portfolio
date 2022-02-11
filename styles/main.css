@@ -2132,7 +2132,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 0 4rem;
+    padding: 0 5rem;
     position: absolute;
     top: 0;
     right: 0;
@@ -2386,6 +2386,9 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
+  .navbar .navbar__container .nav .nav__list {
+    padding: 0 3rem;
+  }
   .intro .hero__container .info {
     margin: 0 1.5rem;
     -webkit-transition: all 0.5s ease;
